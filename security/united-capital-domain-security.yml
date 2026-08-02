@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: probed
+source: live DNS/TLS/HTTP probes of the historic company domain (unitedcp.com)
+note: >-
+  United Capital Financial Advisers was acquired by Goldman Sachs in 2019 and no
+  longer operates independently. The website returns HTTP 404 (UltraDNS parking
+  behind Cloudflare), but the domain still resolves, serves TLS, and carries live
+  mail (MX/SPF/DMARC) records — probed here as the historic corporate domain.
+hosts:
+- host: unitedcp.com
+  https: true
+  http_status: 404
+  tls_version: TLSv1.3
+  cert_issuer: 'C=US, O=Google Trust Services, CN=WE1'
+  cert_expires: Aug 29 20:15:00 2026 GMT
+  hsts: false
+domains:
+- domain: unitedcp.com
+  dnssec: false
+  caa: []
+  spf: true
+  spf_record: 'v=spf1 include:_spf.google.com include:_spf.salesforce.com include:cust-spf.exacttarget.com ip4:207.99.52.203 ip4:18.204.183.4 include:aspmx.pardot.com include:spf.protection.outlook.com ~all'
+  dmarc: true
+  dmarc_policy: none
+  dmarc_record: 'v=DMARC1; p=none; rua=mailto:postmaster@unitedcp.com; ruf=mailto:postmaster@unitedcp.com; fo=0; adkim=r; aspf=r; pct=100; ri=86400; sp=none'
+  mx:
+  - 0 unitedcp-com.mail.protection.outlook.com.
+well_known:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /llms.txt
+  status: 404
+- path: /robots.txt
+  status: 200

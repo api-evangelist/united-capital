@@ -1,8 +1,28 @@
 aid: united-capital
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/united-capital.png
 name: United Capital
-description: 'United Capital is a company surfaced as a portfolio company of bessemer-venture-partners
-  and added to the API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a
-  lead awaiting the enrichment pipeline.'
+description: >-
+  United Capital (United Capital Financial Advisers / United Capital Financial
+  Partners) was a US wealth counseling and financial life management firm
+  founded in 2005, known for its FinLife CX white-label advisor technology
+  platform. Bessemer Venture Partners partnered with the company in 2009. At
+  acquisition it managed roughly $25 billion for 22,000 clients through 220+
+  advisors in over 90 offices. Goldman Sachs acquired United Capital in May
+  2019 for $750 million in cash, rebranding it Goldman Sachs Personal Financial
+  Management, which Creative Planning acquired in 2023. The company no longer
+  operates independently and publishes no public API or developer surface; its
+  historic domain unitedcp.com now returns HTTP 404.
 url: https://raw.githubusercontent.com/api-evangelist/united-capital/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,15 +30,38 @@ x-backed-by:
 - bessemer-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: goldman-sachs
+x-acquired-date: '2019-05'
+x-successor: creative-planning
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Fintech
+- Wealth Management
+- Financial Advisors
+- Financial Planning
+- Acquired
 apis: []
+common:
+- name: Domain Security
+  type: DomainSecurity
+  url: security/united-capital-domain-security.yml
+- name: Bessemer Venture Partners Portfolio Profile
+  type: PortfolioProfile
+  url: https://www.bvp.com/companies/united-capital
+- name: Goldman Sachs Acquisition Announcement
+  type: PressRelease
+  url: https://www.goldmansachs.com/pressroom/press-releases/2019/announcement-16-may-2019
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
