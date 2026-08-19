@@ -34,7 +34,7 @@ x-status: acquired
 x-acquired-by: goldman-sachs
 x-acquired-date: '2019-05'
 x-successor: creative-planning
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-21'
 tags:
