@@ -35,6 +35,9 @@ description: >-
   operates independently and publishes no public API or developer surface; its
   historic domain unitedcp.com now returns HTTP 404.
 url: https://raw.githubusercontent.com/api-evangelist/united-capital/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "The company no longer operates independently and publishes no public API or developer surface; its historic domain unitedcp.com now returns HTTP 404."
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
